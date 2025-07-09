@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+
+/* Reset y variables globales */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-primary: #0D3B66;
+    --brand-secondary: #FAF0CA;
+    --brand-accent: #F4D35E;
+    --brand-danger: #EE964B;
+    --text-main: #1B263B;
+    --bg-light: #F0F4EF;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/* Body */
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    background: var(--bg-light);
+    line-height: 1.6;
+}
+
+
+/* Contenedor centrado */
+
+.container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}

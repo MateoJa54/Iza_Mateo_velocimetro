@@ -1,0 +1,23 @@
+<div class="wrapper" [ngClass]="speedClass()">
+    <div class="card">
+        <header class="card-header">
+            <h1>{{ speed() }}<span> km/h</span></h1>
+        </header>
+
+        <div class="controls">
+            <button class="btn accelerate" (click)="acelerar()">🏎️ +5</button>
+            <button class="btn brake" (click)="frenar()">🛑 −3</button>
+            <button class="btn reset" (click)="reiniciar()">🔄 0</button>
+        </div>
+
+        <section class="legend">
+            <h2>Zonas de Entrenamiento</h2>
+            <ul>
+                <li><span class="box low-speed"></span>Calentamiento<br><small>0–30 km/h</small></li>
+                <li><span class="box medium-speed"></span>Cardio Ligero<br><small>31–70 km/h</small></li>
+                <li><span class="box high-speed"></span>Cardio Intenso<br><small>71–120 km/h</small></li>
+                <li><span class="box danger-speed"></span>Zona de Riesgo<br><small>>120 km/h</small></li>
+            </ul>
+        </section>
+    </div>
+</div>
