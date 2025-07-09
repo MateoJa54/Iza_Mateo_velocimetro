@@ -8,9 +8,9 @@ RUN npm run build -- --configuration production
 
 # Etapa 2: Servidor Nginx
 FROM nginx:alpine
+COPY --from=builder /app/dist/IzaMateo2Ex/browser /usr/share/nginx/html
 
-# 1) Copia contenido de dist directamente a la raíz de Nginx
-COPY --from=builder /app/dist/IzaMateo2Ex/ /usr/share/nginx/html/
-
-# 2) Copia tu configuración de Nginx
+#Usa este archivo para definir cómo responder a las peticiones que lleguen al servidor.
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+#CMD ["nginx", "-g", "daemon off;"]
